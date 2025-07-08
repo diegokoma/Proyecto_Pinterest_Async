@@ -141,7 +141,7 @@
 }
 .Object-3 > input::placeholder {
   font-size: var(--dcp-font-size-xs);
-  padding-left: 7%;
+  padding-left: 4%;
 }
 .Object-4 {
   display: flex;

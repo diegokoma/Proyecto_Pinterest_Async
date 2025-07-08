@@ -27,6 +27,7 @@ export const searchListener = () => {
       const palabra = e.target.value.trim()
       if (palabra.length > 0) {
         search_function(palabra)
+        input.value = ''
       }
     }
   })
