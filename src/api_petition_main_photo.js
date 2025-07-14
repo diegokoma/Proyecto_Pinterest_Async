@@ -22,7 +22,6 @@ export const renderPhotos = () => {
       render(photos)
     })
 }
-
 const render = (photos) => {
   const image = document.querySelector('.image_grid')
   photos.forEach((photo) => {
