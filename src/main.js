@@ -1,6 +1,7 @@
 import './style.css'
 import { mainpart, renderPhotos } from './api_petition_main_photo'
 import { searchListener } from './search_module'
+import { backHome } from './back_home'
 //Header
 const headerpart = () => {
   const header_part = document.createElement('header')
@@ -67,7 +68,9 @@ const headerpart = () => {
     main_nav_list_obj.appendChild(header_objs)
   }
 }
+
 headerpart()
+backHome()
 mainpart()
 renderPhotos()
 searchListener()

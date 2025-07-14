@@ -74,6 +74,7 @@
   height: 100%;
 }
 .main_logo_img {
+  cursor: pointer;
   padding: var(--dcp-padding-xs);
   height: 35px;
 }
