@@ -1,3 +1,4 @@
+export const apiKey = import.meta.env.VITE_UNSPLASH_KEY
 export const mainpart = () => {
   const main_part = document.createElement('main')
   main_part.classList.add('main_part')
@@ -6,7 +7,6 @@ export const mainpart = () => {
   image_grid.classList.add('image_grid')
   main_part.appendChild(image_grid)
 }
-
 let initialPhotos = []
 export const renderPhotos = () => {
   const image = document.querySelector('.image_grid')
@@ -15,14 +15,14 @@ export const renderPhotos = () => {
     render(initialPhotos)
     return
   }
-  fetch('https://api.unsplash.com/photos/random?count=30&client_id=RPV193cILr0m9_9Cq82WrvRNbFWG1yvxRbsvoVTzAbc')
+  fetch(`https://api.unsplash.com/photos/random?count=30&client_id=${apiKey}`)
     .then((res) => res.json())
     .then((photos) => {
       initialPhotos = photos
       render(photos)
     })
 }
-const render = (photos) => {
+export const render = (photos) => {
   const image = document.querySelector('.image_grid')
   photos.forEach((photo) => {
     const photo_container = document.createElement('div')
